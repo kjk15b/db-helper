@@ -7,9 +7,9 @@ dataStream = {"UR" : list(),
               "UL" : list(),
               "LR" : list(),
               "LL" : list()}
-upperLimit = sys.argv[4]
+upperLimit = int(sys.argv[4])
 daq = sys.argv[5]
-port = sys.argv[6]
+port = int(sys.argv[6])
 
 def attemptDeliver():
     backupStream = dataStream
