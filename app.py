@@ -12,6 +12,9 @@ daq = sys.argv[5]
 port = int(sys.argv[6])
 
 def attemptDeliver():
+    global dataStream
+    global daq
+    global port
     backupStream = dataStream
     for key in dataStream.keys():
         url = "http://{}:{}/data/ingest/{}".format(daq, port, key)
@@ -32,6 +35,8 @@ def attemptDeliver():
 
 @app.route('/data/ingest/<sensor>', methods=["POST"])
 def ingestRoute(sensor):
+    global dataStream
+    global upperLimit
     if request.method == "POST":
         data = request.form.to_dict()
         value = data['data']
