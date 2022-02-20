@@ -6,7 +6,7 @@ dataStream = {"UR" : list(),
               "UL" : list(),
               "LR" : list(),
               "LL" : list()}
-upperLimit = sys.argv[4]
+upperLimit = 100
 
 
 app.route('/data/ingest/<sensor>', methods=["POST"])
