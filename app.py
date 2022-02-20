@@ -24,5 +24,5 @@ def ingestRoute(sensor):
 
 
 if __name__ == '__main__':
-    app.run(debug=sys.argv[1], host=sys.arv[2],
+    app.run(debug=sys.argv[1], host=sys.argv[2],
     port=sys.argv[3])
