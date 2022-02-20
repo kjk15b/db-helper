@@ -8,11 +8,11 @@ dataStream = {"UR" : list(),
               "LL" : list()}
 upperLimit = 100
 
-app.route("/")
+@app.route("/")
 def home():
     return "Hello World"
 
-app.route('/data/ingest/<sensor>', methods=["POST"])
+@app.route('/data/ingest/<sensor>', methods=["POST"])
 def ingestRoute(sensor):
     if request.method == "POST":
         data = request.form.to_dict()
