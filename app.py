@@ -8,6 +8,9 @@ dataStream = {"UR" : list(),
               "LL" : list()}
 upperLimit = 100
 
+app.route("/")
+def home():
+    return "Hello World"
 
 app.route('/data/ingest/<sensor>', methods=["POST"])
 def ingestRoute(sensor):
